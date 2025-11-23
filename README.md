@@ -64,6 +64,11 @@ evaluation/quality_scores.png
 ## 📌 3. Architecture Diagram
 The Agentic Content Repurposer follows a multi-agent orchestration pipeline:
 
+<p align="center">
+  <img src="= ./Untitled diagram-2025-11-20-191145.png" width="800">
+</p>
+
+
 
 
 
