@@ -65,8 +65,20 @@ evaluation/quality_scores.png
 The Agentic Content Repurposer follows a multi-agent orchestration pipeline:
 
 
+
+
+## 🛠 4. Tech Stack
+
+- **Python 3.10+**
+- **OpenAI GPT-4o / GPT-4.1**
+- **CrewAI-style multi-agent orchestration**
+- **dotenv** for environment variable management
+- **Matplotlib** for performance charts
+- **Pandas** for evaluation logging
+- **Retry logic + error-safe wrappers** for robust execution
+
 ---
-## 📌 4. Project Structure
+## 📌 5. Project Structure
 
 ```
 agentic-content-repurposer/
@@ -90,7 +102,7 @@ agentic-content-repurposer/
 
 ---
 
-## 📌 5. Installation
+## 📌 6. Installation
 
 ### 1. Clone repo
 ```
@@ -118,7 +130,7 @@ pip install -r requirements.txt
 OPENAI_API_KEY=your_real_key_here
 ```
 ---
-## 📌 6. Run the System
+## 📌 7. Run the System
 
 ```
 python -m src.main
@@ -141,7 +153,7 @@ Refinements when needed
 test_results.csv updated
 ```
 ---
-## 📌 7. Generate Graphs
+## 📌 8. Generate Graphs
 
 After running several test cases:
 
@@ -154,7 +166,7 @@ Creates:
 evaluation/quality_scores.png
 ```
 ---
-## 📌 8. Custom Quality Tool
+## 📌 9. Custom Quality Tool
 
 Located in:
 ```
@@ -175,7 +187,7 @@ Outputs scorecard:
 Shows exactly why content is improved after refinement.
 
 ---
-## 📌 9. Self-Improvement Engine
+## 📌 10. Self-Improvement Engine
 
 Integrated inside main.py.
 
@@ -191,7 +203,7 @@ Workflow:
 This simulates reinforcement-learning-style behavior.
 
 ---
-## 🛡️ 10. Robustness & Error Handling
+## 🛡️ 11. Robustness & Error Handling
 
 - All agent calls use a safe `run_agent` wrapper with retries and fallback text.
 - If the strategy output cannot be parsed, the system falls back to a default strategy based on the user brief.
@@ -200,7 +212,7 @@ This simulates reinforcement-learning-style behavior.
 - Evaluation CSV writes are idempotent, and a missing file is recreated automatically.
 
 ---
-## 📌 11. Future Enhancements
+## 📌 12. Future Enhancements
 
 - Multi-round RL refinement loop  
 - TikTok / YouTube script generator  
@@ -210,7 +222,7 @@ This simulates reinforcement-learning-style behavior.
 
 ---
 
-## 📌 12. Conclusion
+## 📌 13. Conclusion
 
 The **Agentic Content Repurposer** is a fully developed multi-agent AI workflow that demonstrates:
 
