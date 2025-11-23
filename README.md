@@ -99,10 +99,24 @@ agentic-content-repurposer/
 
 ```
 
+## 🔄 6. Workflow Overview (How the system works)
+
+1. User enters a short content brief.
+2. Strategy Agent analyzes tone, audience, and messaging.
+3. Draft Writer generates a universal long-form draft.
+4. Platform Agents transform the draft for:
+   - LinkedIn
+   - Instagram (+ hashtags)
+   - Email
+5. Quality Scoring Tool evaluates each output across multiple dimensions.
+6. If a score falls below threshold (0.85), refinement is automatically triggered.
+7. Improved output replaces the weaker version.
+8. All results are logged to `evaluation/test_results.csv`.
+9. Quality graph generator creates visual performance reports.
 
 ---
 
-## 📌 6. Installation
+## 📌 7. Installation
 
 ### 1. Clone repo
 ```
@@ -130,7 +144,7 @@ pip install -r requirements.txt
 OPENAI_API_KEY=your_real_key_here
 ```
 ---
-## 📌 7. Run the System
+## 📌 8. Run the System
 
 ```
 python -m src.main
@@ -153,7 +167,7 @@ Refinements when needed
 test_results.csv updated
 ```
 ---
-## 📌 8. Generate Graphs
+## 📌 9. Generate Graphs
 
 After running several test cases:
 
@@ -166,7 +180,7 @@ Creates:
 evaluation/quality_scores.png
 ```
 ---
-## 📌 9. Custom Quality Tool
+## 📌 10. Custom Quality Tool
 
 Located in:
 ```
@@ -187,7 +201,7 @@ Outputs scorecard:
 Shows exactly why content is improved after refinement.
 
 ---
-## 📌 10. Self-Improvement Engine
+## 📌 11. Self-Improvement Engine
 
 Integrated inside main.py.
 
@@ -203,7 +217,7 @@ Workflow:
 This simulates reinforcement-learning-style behavior.
 
 ---
-## 🛡️ 11. Robustness & Error Handling
+## 🛡️ 12. Robustness & Error Handling
 
 - All agent calls use a safe `run_agent` wrapper with retries and fallback text.
 - If the strategy output cannot be parsed, the system falls back to a default strategy based on the user brief.
@@ -212,7 +226,7 @@ This simulates reinforcement-learning-style behavior.
 - Evaluation CSV writes are idempotent, and a missing file is recreated automatically.
 
 ---
-## 📌 12. Future Enhancements
+## 📌 13. Future Enhancements
 
 - Multi-round RL refinement loop  
 - TikTok / YouTube script generator  
@@ -222,7 +236,7 @@ This simulates reinforcement-learning-style behavior.
 
 ---
 
-## 📌 13. Conclusion
+## 📌 14. Conclusion
 
 The **Agentic Content Repurposer** is a fully developed multi-agent AI workflow that demonstrates:
 
@@ -232,3 +246,7 @@ The **Agentic Content Repurposer** is a fully developed multi-agent AI workflow 
 - Automated refinement engine  
 - Evaluation logging + performance visualization  
 - Professional-grade documentation  
+
+## 📄 15. License
+
+This project is licensed under the **MIT License**.
